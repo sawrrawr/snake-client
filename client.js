@@ -7,6 +7,15 @@ const connect = () => {
 
   conn.setEncoding('utf8');
 
+  conn.on('connect', () => {
+    console.log(`Successfully connected to the game server`);
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: SMW');
+  })
+
+
   conn.on("data", (data) => {
     console.log(data);
   });
