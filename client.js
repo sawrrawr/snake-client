@@ -14,19 +14,19 @@ const connect = () => {
     }
   });
     
-    conn.on('connect', () => {
-      setTimeout(() => {
-        conn.write('Move: up')}, 1000
-      );
+    // conn.on('connect', () => {
+    //   setTimeout(() => {
+    //     conn.write('Move: up')}, 1000
+    //   );
    
-      setTimeout(() => {
-        conn.write('Move: right')}, 2000
-      );
+    //   setTimeout(() => {
+    //     conn.write('Move: right')}, 2000
+    //   );
  
-      setTimeout(() => {
-        conn.write('Move: down')}, 3000
-      );
-    });
+    //   setTimeout(() => {
+    //     conn.write('Move: down')}, 3000
+    //   );
+    // });
 
 
 
