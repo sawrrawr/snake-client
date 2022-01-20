@@ -9,11 +9,25 @@ const connect = () => {
 
   conn.on('connect', () => {
     console.log(`Successfully connected to the game server`);
+    () => {
+      conn.write('Name: SMW');
+    }
   });
+    
+    conn.on('connect', () => {
+      setTimeout(() => {
+        conn.write('Move: up')}, 1000
+      );
+   
+      setTimeout(() => {
+        conn.write('Move: right')}, 2000
+      );
+ 
+      setTimeout(() => {
+        conn.write('Move: down')}, 3000
+      );
+    });
 
-  conn.on('connect', () => {
-    conn.write('Name: SMW');
-  })
 
 
   conn.on("data", (data) => {
